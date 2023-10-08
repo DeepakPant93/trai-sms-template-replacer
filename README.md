@@ -20,14 +20,13 @@ from traisms import SMSTemplate
 template = 'Hi, %%|name^{"inputtype" : "text", "maxlength" : "8"}%% has checked out at %%|time^{"inputtype" : "number", "maxlength" : "6"}%% PM from %%|place^{"inputtype" : "text", "maxlength" : "64"}%%'
 values = ["Alice", "2", "Taj Hotel"]
 
-replacer = SMSTemplate()
 ```
 
 Then, simply replace the placeholders in the template with the provided values using the `replace` method:
 
 ```python
 try:
-    result = replacer.replace(template, values)
+    result = SMSTemplate.replace(template, values)
     print(result)
 except Exception as e:
     print(e)

@@ -1,4 +1,26 @@
+"""
+# traisms
+
+Author: Deepak Pant<deepak.93p@gmail.com>
+
+## Description
+
+This module provides functionality for replacing TRAI SMS template placeholders with actual values. It enables you to format SMS messages according to the Telecom Regulatory Authority of India (TRAI) guidelines.
+
+## Usage
+
+To use this module, follow these steps:
+
+1. Import the module:
+
+   ```python
+   import traisms
+   ```
+"""
+
+
 import re
+
 
 class SMSTemplate:
     def replace(template, values):
@@ -31,15 +53,18 @@ class SMSTemplate:
 
                 # Check the max length of the input value
                 if len(value) > int(max_length):
-                    raise Exception(f'Can not replace {value} exceeding max length of {max_length}')
+                    raise Exception(
+                        f'Can not replace {value} exceeding max length of {max_length}')
 
                 # Check the input type of the input value ̰
                 if 'number' == input_type and not value.isdigit():
-                    raise Exception(f'Can not replace {value} expecting numeric value')
+                    raise Exception(
+                        f'Can not replace {value} expecting numeric value')
 
                 template = template.replace(f'%%{match}%%', value, 1)
             else:
-                raise Exception(f'Can not replace {match} as it is not a valid template')
+                raise Exception(
+                    f'Can not replace {match} as it is not a valid template')
             counter += 1
 
         return template
