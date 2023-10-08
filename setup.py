@@ -9,11 +9,11 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 VERSION = '0.0.1'
 DESCRIPTION = 'This package to replace content in the TRAI SMS template'
-LONG_DESCRIPTION = file: README.md
+
 
 # Setting up
 setup(
-    name="traismstemplatereplacer",
+    name="traisms",
     version=VERSION,
     author="Deepak Pant",
     author_email="<deepak.93p@gmail.com>",
