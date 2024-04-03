@@ -4,7 +4,7 @@ Replace content in the TRAI SMS template with ease using this Python package. Th
 
 ## Installation
 
-You can install the `traisms` library using pip:
+You can install the `traisms` library using pip: 
 
 ```bash
 pip install traisms
